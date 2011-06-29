@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid">
+  
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>TITLE OF THE WORK</dc:title>
+    <!--
+    
+      The UID identifies the book for eBook readers. This can be any form of identifer,
+      such as a URI or ISBN.
+    
+    -->
+    <dc:identifier id="bookid">UID FOR THE WORK</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Blackborow, Sarah" opf:role="aut">Sarah Blackborow</dc:creator>
+    <dc:creator opf:role="edt">Ryan Cannon</dc:creator>
+    <dc:description></dc:description>
+    <meta name="cover" content="imgcov"/>
+  </metadata>
+  
+  <!--
+  
+    The <manifest /> element must list every file in the OEBPS folder.
+  
+  -->
+  <manifest>
+    <!-- TEXT -->
+    <item id="text" href="text.xhtml" media-type="application/xhtml+xml"/>
+
+    <!-- CSS -->
+    <item id="stylesheet" href="style.css" media-type="text/css"/>
+
+    <!-- IMAGES -->
+    <item id="imagecov" href="imagecov.png" media-type="image/png" />
+    
+    <!-- FONTS -->
+    <!-- <item id="myfont" href="css/myfont.otf" media-type="application/x-font-opentype"/> -->
+    
+    <!-- T.O.C. -->
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    
+  </manifest>
+
+  <spine toc="ncx">
+    <itemref idref="text" />
+  </spine>
+
+  <!--
+  <guide>
+    <reference type="loi" title="List Of Illustrations" href="appendix.html#figures" />
+  </guide>
+  -->
+</package>
